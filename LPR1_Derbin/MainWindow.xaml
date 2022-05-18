@@ -11,7 +11,8 @@
             <TextBlock Width="330" Height="42" FontSize="25" Text="Набрано 4-х значное число" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="440"  Canvas.Top="16"/>
             <TextBox x:Name="dataTextBox" Width="150" Height="50" Canvas.Left="440" Canvas.Top="63"/>
             <Button Width="200" Height="50" FontSize="30" Content="Вычислить" Canvas.Left="30" Canvas.Top="51" Click="GetResult"/>
-            <TextBlock Width="330" Height="231" FontSize="25" Background="Aquamarine" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="440"  Canvas.Top="150"/>
+            <Button Width="200" Height="50" FontSize="30" Content="Выйти" Canvas.Left="30" Canvas.Top="360" Click="Exit" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <TextBlock x:Name="OtvetTextBlock" Width="330" Height="231" FontSize="25" Background="Aquamarine" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Left="440"  Canvas.Top="150"/>
         </Canvas>
     </Grid>
 </Window>

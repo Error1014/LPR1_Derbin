@@ -45,14 +45,31 @@ namespace LPR1_Derbin
                 n[1] = (num % 1000)/100;
                 n[2] = (num % 100)/10;
                 n[3] = (num % 10);
-                MessageBox.Show(n[0].ToString()+ " "+ n[1].ToString() + " " + n[2].ToString() + " " + n[3].ToString() + " " );
+                OtvetTextBlock.Text = "Наибольшая цифра: "+GetMax(n)+"\n"+ "Наименьшая цифра: " + GetMin(n);
             }
         }
-        
+        private int GetMax(int[] n)
+        {
+            int max = n[0];
+            for (int i = 0; i < 4; i++)
+            {
+                if(n[i]>max) max = n[i];
+            }
+            return max;
+        }
+        private int GetMin(int[] n)
+        {
+            int min = n[0];
+            for (int i = 0; i < 4; i++)
+            {
+                if (n[i] < min) min = n[i];
+            }
+            return min;
+        }
 
         private void Exit(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
         }
     }
 }
