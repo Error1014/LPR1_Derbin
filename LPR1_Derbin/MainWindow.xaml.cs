@@ -71,5 +71,14 @@ namespace LPR1_Derbin
         {
             this.Close();
         }
+
+        private void dataTextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            var textBox = (TextBox)sender;
+            if (!(Char.IsDigit(e.Text, 0) && textBox.Text.Length <4))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
